@@ -1,0 +1,270 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+   
+  }
+  html body{
+    background-color: #fffcc9;
+  }
+  .header{
+    width: 100%;
+    height: 15vh;
+    overflow: hidden; 
+    background: #93631c;
+    font-family: 'Fira Mono', monospace;
+    -webkit-font-smoothing: antialiased;
+    font-size: .88rem;
+    color: #bdbdd5;
+  }
+  .header1{
+    width: 100%;
+    height: 105vh;
+    overflow: hidden; 
+    background: #93631c;
+    /* #53931c */
+    font-family: 'Fira Mono', monospace;
+    -webkit-font-smoothing: antialiased;
+    font-size: .88rem;
+    color: #bdbdd5;
+  }
+  @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  } 
+  nav{
+    display: flex;
+      padding: 1.5% 5%;
+      justify-content: space-between;
+      align-items: center;
+  }
+  nav .logo{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+  nav ul li{
+    margin: 0 5px;
+  }
+  nav img{
+    width: 200px;
+    height: 60px;
+  }
+  .logo{
+   
+    size: 30px;
+    
+  }
+  nav ul li a{
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 15px;
+  /*   font-weight: 300; */
+    padding: 5px 5px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+  }
+  /* nav ul li a.active, */
+  nav ul li a:hover{
+    color: #111;
+      text-decoration: underline;
+  /*   background: #fff; */
+  }
+  nav .menu-btn i{
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+  }
+  input[type="checkbox"]{
+    display: none;
+  }
+  @media (max-width: 1000px){
+    nav{
+      padding: 0 40px 0 50px;
+      z-index: 1000;
+    }
+  }
+  @media (max-width: 920px) {
+    nav .menu-btn i{
+      display: block;
+      z-index: 1000;
+    }
+    #click:checked ~ .menu-btn i:before{
+      content: "\f00d";
+      z-index: 1000;
+    }
+    nav ul{
+      z-index: 1000;
+      position: fixed;
+      top: 80px;
+      left: -100%;
+      background: #111;
+      height: 100vh;
+      width: 100%;
+      text-align: center;
+      display: block;
+      transition: all 0.3s ease;
+    }
+    #click:checked ~ ul{
+      left: 0;
+    }
+    nav ul li{
+      z-index: 1000;
+      width: 100%;
+      margin: 40px 0;
+    }
+    nav ul li a{
+      z-index: 1000;
+      width: 100%;
+      margin-left: -100%;
+      display: block;
+      font-size: 20px;
+      transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    #click:checked ~ ul li a{
+      z-index: 1000;
+      margin-left: 0px;
+    }
+    nav ul li a.active,
+    nav ul li a:hover{
+      background: none;
+      color: cyan;
+    }
+  }
+
+  /* download */
+
+  .don {
+	
+    height: 50vh;
+}
+.don h2{
+	padding-top:20px;
+/*     margin-top: 50px; */
+    padding-left: 20px;
+}
+.flex{
+    display: flex;
+}
+.buttonDownload {
+	margin-top:20px;
+	display: inline-block;
+	position: relative;
+	padding: 10px 35px;
+  border-radius:90px;
+	background-color: #93631c;
+	color: white;
+/*  align-content: center;
+ align-items: center; */
+ margin-left: 100px;
+	font-family: sans-serif;
+	text-decoration: none;
+	font-size: 0.9em;
+/* 	text-align: center; */
+	text-indent: 15px;
+}
+
+.buttonDownload:hover {
+	background-color: #333;
+	color: white;
+}
+
+.buttonDownload:before, .buttonDownload:after {
+	content: ' ';
+	display: block;
+	position: absolute;
+	left: 15px;
+	top: 52%;
+}
+
+/* Download box shape  */
+.buttonDownload:before {
+	width: 10px;
+	height: 2px;
+	border-style: solid;
+	border-width: 0 2px 2px;
+}
+
+/* Download arrow shape */
+.buttonDownload:after {
+	width: 0;
+	height: 0;
+	margin-left: 3px;
+	margin-top: -7px;
+  
+	border-style: solid;
+	border-width: 4px 4px 0 4px;
+	border-color: transparent;
+	border-top-color: inherit;
+	
+	-webkit-animation: downloadArrow 2s linear infinite;
+	
+	        animation: downloadArrow 2s linear infinite;
+	-webkit-animation-play-state: paused;
+	        animation-play-state: paused;
+}
+
+.buttonDownload:hover:before {
+	border-color: #93631c;
+}
+
+.buttonDownload:hover:after {
+	border-top-color: #93631c;
+	-webkit-animation-play-state: running;
+	        animation-play-state: running;
+}
+
+/* keyframes for the download icon anim */
+@-webkit-keyframes downloadArrow {
+	/* 0% and 0.001% keyframes used as a hackish way of having the button frozen on a nice looking frame by default */
+	0% {
+		margin-top: -7px;
+		opacity: 1;
+	}
+	
+	0.001% {
+		margin-top: -15px;
+		opacity: 0;
+	}
+	
+	50% {
+		opacity: 1;
+	}
+	
+	100% {
+		margin-top: 0;
+		opacity: 0;
+	}
+}
+@keyframes downloadArrow {
+	/* 0% and 0.001% keyframes used as a hackish way of having the button frozen on a nice looking frame by default */
+	0% {
+		margin-top: -7px;
+		opacity: 1;
+	}
+	
+	0.001% {
+		margin-top: -15px;
+		opacity: 0;
+	}
+	
+	50% {
+		opacity: 1;
+	}
+	
+	100% {
+		margin-top: 0;
+		opacity: 0;
+	}
+}

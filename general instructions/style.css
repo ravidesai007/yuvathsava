@@ -1,0 +1,402 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Raleway', sans-serif;
+   
+  }
+  html body{
+	background-color: #fffcc9;
+  }
+  .header{
+	width: 100%;
+	height: 15vh;
+	overflow: hidden; 
+	background: #93631c;
+	font-family: 'Fira Mono', monospace;
+	-webkit-font-smoothing: antialiased;
+	font-size: .88rem;
+	color: #bdbdd5;
+  }
+  .header1{
+	width: 100%;
+	height: 105vh;
+	overflow: hidden; 
+	background: #93631c;
+	/* #53931c */
+	font-family: 'Fira Mono', monospace;
+	-webkit-font-smoothing: antialiased;
+	font-size: .88rem;
+	color: #bdbdd5;
+  }
+  @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+  *{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+  } 
+  nav{
+	display: flex;
+	  padding: 1.5% 5%;
+	  justify-content: space-between;
+	  align-items: center;
+  }
+  nav .logo{
+	color: #fff;
+	font-size: 20px;
+	font-weight: 400;
+  }
+  nav ul{
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+  }
+  nav ul li{
+	margin: 0 5px;
+  }
+  nav img{
+	width: 200px;
+	height: 60px;
+  }
+  .logo{
+   
+	size: 30px;
+	
+  }
+  nav ul li a{
+	color: #f2f2f2;
+	text-decoration: none;
+	font-size: 15px;
+  /*   font-weight: 300; */
+	padding: 5px 5px;
+	border-radius: 5px;
+	letter-spacing: 1px;
+	transition: all 0.3s ease;
+  }
+  /* nav ul li a.active, */
+  nav ul li a:hover{
+	color: #111;
+	  text-decoration: underline;
+  /*   background: #fff; */
+  }
+  nav .menu-btn i{
+	color: #fff;
+	font-size: 22px;
+	cursor: pointer;
+	display: none;
+  }
+  input[type="checkbox"]{
+	display: none;
+  }
+  @media (max-width: 1000px){
+	nav{
+	  padding: 0 40px 0 50px;
+	  z-index: 1000;
+	}
+  }
+  @media (max-width: 920px) {
+	nav .menu-btn i{
+	  display: block;
+	  z-index: 1000;
+	}
+	#click:checked ~ .menu-btn i:before{
+	  content: "\f00d";
+	  z-index: 1000;
+	}
+	nav ul{
+	  z-index: 1000;
+	  position: fixed;
+	  top: 80px;
+	  left: -100%;
+	  background: #111;
+	  height: 100vh;
+	  width: 100%;
+	  text-align: center;
+	  display: block;
+	  transition: all 0.3s ease;
+	}
+	#click:checked ~ ul{
+	  left: 0;
+	}
+	nav ul li{
+	  z-index: 1000;
+	  width: 100%;
+	  margin: 40px 0;
+	}
+	nav ul li a{
+	  z-index: 1000;
+	  width: 100%;
+	  margin-left: -100%;
+	  display: block;
+	  font-size: 20px;
+	  transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	}
+	#click:checked ~ ul li a{
+	  z-index: 1000;
+	  margin-left: 0px;
+	}
+	nav ul li a.active,
+	nav ul li a:hover{
+	  background: none;
+	  color: cyan;
+	}
+  }
+
+/* cards */
+
+
+
+
+.cards1{
+  background-color: #d691298f;
+  margin: 20px 150px;
+  border-radius: 20px;
+  opacity: 1px;
+}
+.flex1{
+  display:grid;
+}
+.img1{
+  
+  width: 350px;
+  height: 150px;
+  margin-left: 390px;
+  border-radius: 20px;
+ /* align-content: center; */
+}
+.h21{
+  text-align: center;
+  /* justify-content: left; */
+  font-size: 30px;
+  color: white;
+}
+.fdiv1{
+  text-align: justify;
+  padding-left: 20px;
+  border-radius: 100px;
+  margin: 25px;
+  padding: 10px;
+  color: #272727;
+}
+
+/* button */
+.button{
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 15px;
+  padding: 12px 34px;
+  font-size: 13px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+.button:hover{
+  border: 1px solid #f44336;
+  background: #f44336;
+  transition: 0.3s;
+}
+
+/* footer */
+
+
+.footer-distributed{
+	background: #444;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	font: bold 16px sans-serif;
+	text-align: left;
+	padding: 30px 40px 20px;
+	overflow: hidden;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	float: left;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+	color:  #ffffff;
+	
+	margin: 0 0 10px;
+}
+
+.footer-distributed h3 span{
+	color:  #5383d3;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer social icons */
+
+.footer-distributed .footer-icons{
+	margin-top: 40px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	float: right;
+}
+
+.footer-distributed .footer-right p{
+  vertical-align: top;
+  padding-bottom: 20px;
+	text-align: center;
+	color: #ffffff;
+}
+
+/* The contact form */
+
+.footer-distributed form{
+	display: inline-block;
+}
+
+.footer-distributed form input,
+.footer-distributed form textarea{
+	display: block;
+	border-radius: 3px;
+	box-sizing: border-box;
+	background-color:  #1f2022;
+	box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+	border: none;
+	resize: none;
+
+	font: inherit;
+	font-size: 14px;
+	font-weight: normal;
+	color:  #d1d2d2;
+
+	width: 400px;
+	padding: 18px;
+}
+
+.footer-distributed ::-webkit-input-placeholder {
+	color:  #5c666b;
+}
+
+.footer-distributed ::-moz-placeholder {
+	color:  #5c666b;
+	opacity: 1;
+}
+
+.footer-distributed :-ms-input-placeholder{
+	color:  #5c666b;
+}
+
+
+.footer-distributed form input{
+	height: 55px;
+	margin-bottom: 15px;
+}
+
+.footer-distributed form textarea{
+	height: 100px;
+	margin-bottom: 20px;
+}
+
+.footer-distributed form button{
+	border-radius: 3px;
+	background-color:  #33383b;
+	color: #ffffff;
+	border: 0;
+	padding: 15px 50px;
+	font-weight: bold;
+	float: left;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 1000px) {
+
+	.footer-distributed {
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-company-name{
+		font-size: 12px;
+	}
+
+	.footer-distributed form input,
+	.footer-distributed form textarea{
+		width: 250px;
+	}
+
+	.footer-distributed form button{
+		padding: 10px 35px;
+	}
+
+}
+
+@media (max-width: 800px) {
+
+	.footer-distributed{
+		padding: 30px;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-right{
+		float: none;
+		max-width: 300px;
+		margin: 0 auto;
+	}
+
+	.footer-distributed .footer-left{
+		margin-bottom: 40px;
+	}
+
+	.footer-distributed form{
+		margin-top: 30px;
+	}
+
+	.footer-distributed form{
+		display: block;
+	}
+
+	.footer-distributed form button{
+		float: none;
+	}
+}
